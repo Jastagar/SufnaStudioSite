@@ -6,6 +6,30 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+
+  --color-primary: #159b82;
+  --color-secondary: #117762;
+  --color-dark: #0a5747;
+}
+
+.bg-custom-primary{
+  background-color: var(--color-primary);
+}
+.text-custom-primary{
+  color: var(--color-primary);
+}
+.bg-custom-secondary{
+  background-color: var(--color-secondary);
+}
+.text-custom-secondary{
+  color: var(--color-secondary);
+}
+.bg-custom-dark{
+  background-color: var(--color-dark);
+}
+.text-custom-dark{
+  color: var(--color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,3 +49,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+section{
+  min-height: 93dvh;
+}
+
+/*
+
+
+
+*/
