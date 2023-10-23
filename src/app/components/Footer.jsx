@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='min-h-[30dvh] bg-emerald-400'>
+    <footer className='min-h-[30dvh] bg-primary-400 overflow-hidden'>
         <div className='flex h-full'>
             {/* Logo */}
             <div className='flex-[0.1] flex items-center justify-end'>

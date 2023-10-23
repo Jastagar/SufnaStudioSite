@@ -1,0 +1,13 @@
+
+
+@font-face {
+    font-family: 'ForestEscape';
+    src: url('Escape.eot'); /* IE9 Compat Modes */
+    src: url('Forest Escape.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Forest Escape.woff') format('woff'), /* Modern Browsers */
+         url('Forest Escape.woff2') format('woff2'), /* Modern Browsers */
+         url('Forest Escape.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+  }

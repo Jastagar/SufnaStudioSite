@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'ForestEscape';
+  /* src: url('./asset/forest-escape/Web-TT/Escape.eot'); IE9 Compat Modes */
+  src: url('./asset/forest-escape/Web-TT/Forest Escape.woff') format('woff'), /* Modern Browsers */
+       url('./asset/forest-escape/Web-TT/Forest Escape.woff2') format('woff2'), /* Modern Browsers */
+       url('./asset/forest-escape/Web-TT/Forest Escape.ttf') format('truetype'); /* Safari, Android, iOS */
+           font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -40,6 +51,10 @@
   }
 }
 
+*{
+  box-sizing: content-box;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -48,6 +63,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: 'Montserrat', sans-serif;
+  
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: ForestEscape;
 }
 
 section{
