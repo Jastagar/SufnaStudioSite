@@ -8,7 +8,7 @@ export default function Footer() {
             {/* Logo */}
             <div className='flex-[0.1] flex items-center justify-end'>
               <h4 className='text-5xl text-white font-bold px-4'>
-                Sufna
+                sufna
               </h4>
             </div>
             {/* Links */}

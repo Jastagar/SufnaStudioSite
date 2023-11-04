@@ -43,13 +43,13 @@
   color: var(--color-dark);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 *{
   box-sizing: content-box;
@@ -74,6 +74,60 @@ h1,h2,h3,h4,h5,h6{
 section{
   min-height: 93dvh;
 }
+
+.cls-2 {
+  font-family: ForestEscape;
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.openLogoAniamtion{
+  position: relative;
+
+
+}
+.openLogoAniamtion::before{
+  content: "";
+  
+  position: absolute;
+  top:0px;
+  right: 0px;
+  height: 100%;
+  
+  background-color: rgb(var(--background-start-rgb));
+  
+  width: 100%;
+  animation-name: sufnalogoAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.scaleInAnimation{
+  opacity: 0.5;
+  scale: 1.1;
+
+  animation-name: scaleInAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sufnalogoAnimation {
+  to{
+    width: 0%;
+  }
+}
+
+@keyframes scaleInAnimation {
+  to{
+    scale: 1;
+    opacity: 1;
+  }
+}
+
 
 /*
 

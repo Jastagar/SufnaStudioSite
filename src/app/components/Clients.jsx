@@ -2,13 +2,15 @@ import Image from "next/image";
 import React from "react";
 import ClientsImage from "../asset/images/Clients.png";
 
-export default function Clients() {
+export default function Clients({data}) {
   return (
     <section id="clients">
       <div className="">
         <div className="flex flex-col gap-12 items-center justify-center">
           {/* <div className=""> */}
-            <h3 className="text-6xl p-4 font-semibold">Our Clients</h3>
+            <h3 className="text-6xl p-4 font-semibold">
+              {data.heading}
+            </h3>
           {/* </div> */}
           <div className="">
             <Image

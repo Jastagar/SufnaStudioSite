@@ -34,40 +34,40 @@ function NavMobile({ scrolled }) {
           <ui className="list-none">
             <li className="my-3 text-xl font-medium">
               <Link
-                className="w-full p-6 hover:bg-primary-400 transition-all"
-                href=""
+                className="w-full px-6 hover:bg-primary-400 transition-all"
+                href="#home"
               >
                 Home
               </Link>
             </li>
             <li className="my-3 text-xl font-medium">
               <Link
-                className="w-full p-6 hover:bg-primary-400 transition-all"
-                href=""
+                className="w-full px-6 hover:bg-primary-400 transition-all"
+                href="#aboutus"
               >
                 About Us
               </Link>
             </li>
             <li className="my-3 text-xl font-medium">
               <Link
-                className="w-full p-6 hover:bg-primary-400 transition-all"
-                href=""
+                className="w-full px-6 hover:bg-primary-400 transition-all"
+                href="#portfolio"
               >
                 Our Work
               </Link>
             </li>
             <li className="my-3 text-xl font-medium">
               <Link
-                className="w-full p-6 hover:bg-primary-400 transition-all"
-                href=""
+                className="w-full px-6 hover:bg-primary-400 transition-all"
+                href="#clients"
               >
                 Testimonials
               </Link>
             </li>
             <li className="my-3 text-xl font-medium">
               <Link
-                className="w-full p-6 hover:bg-primary-400 transition-all"
-                href=""
+                className="w-full px-6 hover:bg-primary-400 transition-all"
+                href="#contact"
               >
                 Contact Us
               </Link>
@@ -92,7 +92,7 @@ function NavDefault({ scrolled }) {
                 className={`w-full p-9 ${
                   scrolled ? "hover:bg-primary-400" : "hover:bg-primary-200"
                 } transition-all`}
-                href=""
+                href="#home"
               >
                 Home
               </Link>
@@ -102,7 +102,7 @@ function NavDefault({ scrolled }) {
                 className={`w-full p-9 ${
                   scrolled ? "hover:bg-primary-400" : "hover:bg-primary-200"
                 } transition-all`}
-                href=""
+                href="#aboutus"
               >
                 About Us
               </Link>
@@ -112,7 +112,7 @@ function NavDefault({ scrolled }) {
                 className={`w-full p-9 ${
                   scrolled ? "hover:bg-primary-400" : "hover:bg-primary-200"
                 } transition-all`}
-                href=""
+                href="#portfolio"
               >
                 Our Work
               </Link>
@@ -122,7 +122,7 @@ function NavDefault({ scrolled }) {
                 className={`w-full p-9 ${
                   scrolled ? "hover:bg-primary-400" : "hover:bg-primary-200"
                 } transition-all`}
-                href=""
+                href="#clients"
               >
                 Testimonials
               </Link>
@@ -132,16 +132,16 @@ function NavDefault({ scrolled }) {
                 className={`w-full p-9 ${
                   scrolled ? "hover:bg-primary-400" : "hover:bg-primary-200"
                 } transition-all`}
-                href=""
+                href="#contact"
               >
                 Contact Us
               </Link>
             </li>
           </ui>
         </div>
-        <div className={`font-bold text-4xl ${!scrolled? "text-white":"text-primary-900"}`}>
-          Sufna
-        </div>
+        <h2 className={`font-bold text-4xl ${!scrolled? "text-white":"text-primary-900"}`}>
+          sufna
+        </h2>
       </div>
     </>
   );

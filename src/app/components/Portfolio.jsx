@@ -12,7 +12,7 @@ import image9 from '../asset/images/image9.jpg'
 
 const dummyVideos = [
   {
-    url: "https://www.youtube.com/embed/suSKmHIK5NI?si=V-E7XTN6C-5wDR5X",
+    url: "https://www.youtube.com/embed/suSKmHIK5NI",
     title: "video1",
   },
   {
@@ -121,10 +121,11 @@ gallery.querySelectorAll('.gallery-item').forEach(function (item) {
 
 function ImageElementMasonryGallery({title,...props}){
   return(
-      <div className="w-[33.33%]">
+      <div className=" p-2 sm:w-[50%] md:w-[33.33%] md:p-0">
         <Image
           priority
           // fill
+          alt="Flexing Image"
           className="w-full h-full"
           {...props}
         />
@@ -132,13 +133,13 @@ function ImageElementMasonryGallery({title,...props}){
   )
 }
 
-export default function Portfolio() {
+export default function Portfolio({data}) {
 
   return (
     <section id="portfolio">
       <div className="p-8 h-full">
-        <h2 className="text-center text-2xl md:text-6xl font-medium p-3">
-          Our Work
+        <h2 className="text-center text-4xl md:text-6xl font-semibold p-10">
+          {data.heading}
         </h2>
 
         {/* Images goes here */}
@@ -149,15 +150,14 @@ export default function Portfolio() {
             ))}
         </div>
         {/* Videos section */}
-        <div className="flex h-full">
+        <div className="flex h-full flex-wrap">
           {dummyVideos &&
             dummyVideos.map((e, i) => (
-              <div key={"eACHKEYFORVIDEO" + i} className="rounded-md  grow">
+              <div key={"eACHKEYFORVIDEO" + i} className="p-2 md:w-[50%]rounded-md grow">
                 <iframe
                   src={e.url}
                   title={e.title}
-                  frameborder="0"
-                  className="w-full aspect-[16/9]"
+                  className=" w-full aspect-[16/9]"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
