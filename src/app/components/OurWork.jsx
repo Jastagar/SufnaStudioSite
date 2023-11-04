@@ -19,6 +19,30 @@ const dummyVideos = [
     url: "https://www.youtube.com/embed/Yzm2wJkTfs8",
     title: "video2",
   },
+  {
+    url: "https://www.youtube.com/embed/suSKmHIK5NI",
+    title: "video1",
+  },
+  {
+    url: "https://www.youtube.com/embed/Yzm2wJkTfs8",
+    title: "video2",
+  },
+  {
+    url: "https://www.youtube.com/embed/suSKmHIK5NI",
+    title: "video1",
+  },
+  {
+    url: "https://www.youtube.com/embed/Yzm2wJkTfs8",
+    title: "video2",
+  },
+  {
+    url: "https://www.youtube.com/embed/suSKmHIK5NI",
+    title: "video1",
+  },
+  {
+    url: "https://www.youtube.com/embed/Yzm2wJkTfs8",
+    title: "video2",
+  },
 ];
 
 // const ImageSizing = undefined
@@ -119,21 +143,7 @@ gallery.querySelectorAll('.gallery-item').forEach(function (item) {
 */
 
 
-function ImageElementMasonryGallery({title,...props}){
-  return(
-      <div className=" p-2 sm:w-[50%] md:w-[33.33%] md:p-0">
-        <Image
-          priority
-          // fill
-          alt="Flexing Image"
-          className="w-full h-full"
-          {...props}
-        />
-      </div>
-  )
-}
-
-export default function Portfolio({data}) {
+export default function OurWork({data}) {
 
   return (
     <section id="portfolio">
@@ -144,11 +154,7 @@ export default function Portfolio({data}) {
 
         {/* Images goes here */}
 
-        <div className="min-h-[80dvh] flex flex-wrap">
-            {images && images.map((e,i)=>(
-              <ImageElementMasonryGallery key={"EACHHeXAGONIMAGe"+i} {...e} />
-            ))}
-        </div>
+        
         {/* Videos section */}
         <div className="flex h-full flex-wrap">
           {dummyVideos &&
@@ -165,7 +171,6 @@ export default function Portfolio({data}) {
             ))}
         </div>
       </div>
-      
     </section>
   );
 }
