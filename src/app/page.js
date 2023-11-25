@@ -1,7 +1,7 @@
 import Script from "next/script";
 import Aboutus from "./components/Aboutus";
 import Hero from "./components/Hero";
-import Portfolio from "./components/Portfolio";
+import OurWork from "./components/OurWork";
 import Clients from "./components/Clients";
 import ContactMe from "./components/ContactMe";
 
@@ -12,7 +12,7 @@ export default async function Home() {
       <main className="font-sans overflow-x-hidden">
         <Hero data={data.home} />
         <Aboutus data={data.aboutus} />
-        <Portfolio data={data.ourwork} />
+        <OurWork data={data.ourwork} />
         <Clients data={data.clients} />
 
         <ContactMe data={data.contactus || null} />
