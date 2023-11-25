@@ -12,7 +12,7 @@ export default function Hero({data}) {
         <div className='flex flex-col xl:flex-row justify-between items-center h-full text-center md:text-start'>
           {/* Heading */}
           <div data-aos-once="true" data-aos="fade-left" className='flex items-center h-full md:max-w-[50%]'>
-            <div className='md:text-7xl text-xl font-bold leading-[-0.25px] m-10'>
+            <div style={{fontFamily:"__Inter_e66fe9"}} className='md:text-7xl text-xl font-bold leading-[-0.25px] m-10'>
               {/* <SufnaAnimation /> */}
               <div className="flex py-8">
                 <div className="cls-2 scaleInAnimation px-2 text-primary-500">
