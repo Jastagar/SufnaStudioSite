@@ -1,18 +1,24 @@
 import React from 'react'
-import HeroSvg from '../asset/images/HeroSvg.svg'
+// import HeroSvg from '../asset/images/HeroSvg.svg'
+import HeroSvg from '../asset/images/BG_Hero.JPG'
 import Image from 'next/image'
 import Link from 'next/link'
-import SufnaAnimation from './SufnaAnimation'
+// import SufnaAnimation from './SufnaAnimation'
 
 export default function Hero({data}) {
 
   return (
-    <div className='min-h-[70dvh] md:p-10 lg:p-20' id='home'>
+    <div className='min-h-[70dvh] md:p-10 lg:p-20 relative' id='home'>
         <div className='flex flex-col xl:flex-row justify-between items-center h-full text-center md:text-start'>
           {/* Heading */}
           <div data-aos-once="true" data-aos="fade-left" className='flex items-center h-full md:max-w-[50%]'>
             <div className='md:text-7xl text-xl font-bold leading-[-0.25px] m-10'>
-              <SufnaAnimation />
+              {/* <SufnaAnimation /> */}
+              <div className="flex py-8">
+                <div className="cls-2 scaleInAnimation px-2 text-primary-500">
+                  sufna
+                </div>
+              </div>
               {/* We make your <span className='bounceLetter'>S</span>tories,<br/><span className='text-primary-600'>Your Stories make us</span> */}
               {data.heading}
               <div className='font-medium md:text-xl text-base'>
@@ -33,15 +39,14 @@ export default function Hero({data}) {
               </div>
             </div>
           </div>
-          {/* Image */}
-
-          <div className='hidden flex-col flex-1 h-full lg:flex items-center justify-center'>
-            <div className='p-2 flex items-end'>
-              <span className='text-4xl font-semibold'>Lights-</span>
-              <span className='text-4xl font-semibold'>Camera-</span>
-              <span className='text-4xl font-semibold'>Action</span>
-            </div>
-            <Image data-aos="fade-right" className='aspect-[1]' src={HeroSvg} alt="Hero SVG" />
+        </div>
+        <div className='absolute top-0 right-0 w-[60%] h-full z-[-1]'>
+          <div className='w-full relative h-full'>
+            <Image
+              fill
+              src={HeroSvg}
+            />
+            <div className='BgHeroGradient absolute top-0 left-0 h-full w-full'/>
           </div>
         </div>
     </div>
