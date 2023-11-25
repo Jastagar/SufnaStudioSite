@@ -23,6 +23,7 @@ module.exports = {
         'silver': '#ecebff',
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
+        'body-background':"#d6dbdc",
         'primary': {
           50:'#C2FBF0',
           100:'#88F4E0',
