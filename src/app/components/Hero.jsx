@@ -35,8 +35,13 @@ export default function Hero({data}) {
           </div>
           {/* Image */}
 
-          <div data-aos="fade-right" className='hidden flex-1 h-full lg:flex items-center justify-center'>
-            <Image className='aspect-[1]' src={HeroSvg} alt="Hero SVG" />
+          <div className='hidden flex-col flex-1 h-full lg:flex items-center justify-center'>
+            <div className='p-2 flex items-end'>
+              <span className='text-4xl font-semibold'>Lights-</span>
+              <span className='text-4xl font-semibold'>Camera-</span>
+              <span className='text-4xl font-semibold'>Action</span>
+            </div>
+            <Image data-aos="fade-right" className='aspect-[1]' src={HeroSvg} alt="Hero SVG" />
           </div>
         </div>
     </div>
