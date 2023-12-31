@@ -50,7 +50,7 @@ export function ContactMeFrom({data}){
         <form ref={form} className='MainForm' onSubmit={handleSubmit}>
           <div className='flex'>
             <EachInput required={true} maxLength={30} name={'from_name'} type='text'  label={'Your name'} />
-            <EachInput required={true} maxLength={40} name={'subject'} type='text'  label={'Your Email'} />
+            <EachInput required={true} maxLength={40} name={'subject'} type='email'  label={'Your Email'} />
           </div>
           <div className='p-4'>
             <div className='eachTD'>
