@@ -13,17 +13,11 @@ import image6 from "../asset/images/image6.jpg";
 import image7 from "../asset/images/image7.jpg";
 import image8 from "../asset/images/image8.jpg";
 import image9 from "../asset/images/image9.jpg";
+import LoadingSVG from "../asset/ImagesFinal/LoadingSVG";
+import YoutubeIcon from "../asset/ImagesFinal/YoutubeIcon";
 
 
 const dummyVideos = [
-  {
-    url: "https://www.youtube.com/embed/suSKmHIK5NI",
-    title: "video1",
-  },
-  {
-    url: "https://www.youtube.com/embed/Yzm2wJkTfs8",
-    title: "video2",
-  },
   {
     url: "https://www.youtube.com/embed/suSKmHIK5NI",
     title: "video1",
@@ -138,26 +132,26 @@ const GraphInfo=[
 
 export default function OurWork({ data }) {
   return (
-    <section id="portfolio">
-      <div className="p-8 h-full">
-        <h2 className="text-center text-4xl md:text-6xl font-semibold p-10">
-          {data.heading}
+    <section className="relative h-[125dvh] z-[-2] OurWorkBackground text-white top-[-60dvh] pt-[15dvh]" id="portfolio">
+      <div className="h-full">
+        
+        <h2 className="text-center text-4xl md:text-6xl font-bold  drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] stroke-black p-10 flex items-baseline justify-center">
+          {"Our W"}<span className="h-10 w-10"><LoadingSVG /></span>{"rk"}
         </h2>
-
-        {/* Images goes here */}
-
-        {/* Videos section */}
-        <div className="flex h-full flex-wrap">
+        <h3 className="text-center pb-12 text-3xl font-semibold">
+          We Live the stories we tell
+        </h3>
+        <div className="flex h-[65dvh] flex-wrap mx-40 rounded-2xl overflow-hidden">
           {dummyVideos &&
             dummyVideos.map((e, i) => (
               <div
                 key={"eACHKEYFORVIDEO" + i}
-                className="p-2 md:w-[50%]rounded-md grow"
+                className="rounded-md grow w-[33%]"
               >
                 <iframe
                   src={e.url}
                   title={e.title}
-                  className=" w-full aspect-[16/9]"
+                  className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
@@ -165,29 +159,41 @@ export default function OurWork({ data }) {
             ))}
         </div>
 
+        <div className="text-center font-bold text-2xl py-8">
+          <i>Loading Your Dreams Onto Our Camera.</i>
+          <div className="flex justify-center items-center">
+            <span className="h-10 w-10"><YoutubeIcon /></span><i>/SufnaProductions</i>
+          </div>
+        </div>
+
+        {/* Images goes here */}
+
+        {/* Videos section */}
+        {/*  */}
+
         {/* Company Stats */}
-        <div className="flex justify-center items-center h-[70dvh] my-10">
+        {/* <div className="flex justify-center items-center h-[70dvh] my-10">
           <div className="flex-grow h-full flex flex-col items-center justify-between">
             <div className="h-full w-[80%] m-4 flex items-center justify-between">
-              <PortfolioGraph color={GraphInfo[0].color} percent={GraphInfo[0].percent} /> {/*Graph */}
+              <PortfolioGraph color={GraphInfo[0].color} percent={GraphInfo[0].percent} /> { Graph }
               <div style={{fontFamily:''}} className="text-5xl m-3">
                 {GraphInfo[0].label}
                 <div className="text-base">
                   {GraphInfo[0].subText}
                 </div>
               </div>{" "}
-              {/* Label */}
+              { Label }
             </div>
-            {/* Decorative Thing Here */}
+            { Decorative Thing Here }
             <div className="h-full w-[80%] m-4 flex items-center justify-between">
-              <PortfolioGraph color={GraphInfo[1].color} percent={GraphInfo[1].percent} /> {/*Graph */}
+              <PortfolioGraph color={GraphInfo[1].color} percent={GraphInfo[1].percent} /> {Graph }
               <div style={{fontFamily:''}} className="text-5xl m-3">
                 {GraphInfo[1].label}
                 <div className="text-base">
                   {GraphInfo[1].subText}
                 </div>
               </div>{" "}
-              {/* Label */}
+              { Label }
             </div>
           </div>
 
@@ -199,28 +205,28 @@ export default function OurWork({ data }) {
 
           <div className="flex-grow h-full flex flex-col items-center justify-between">
             <div className="h-full w-[80%] m-4 flex flex-row-reverse items-center justify-between">
-              <PortfolioGraph color={GraphInfo[2].color} percent={GraphInfo[2].percent} /> {/*Graph */}
+              <PortfolioGraph color={GraphInfo[2].color} percent={GraphInfo[2].percent} /> {Graph }
               <div style={{fontFamily:''}} className="text-5xl m-3">
                 {GraphInfo[2].label}
                 <div className="text-base">
                   {GraphInfo[2].subText}
                 </div>
               </div>{" "}
-              {/* Label */}
+              { Label }
             </div>
-            {/* Decorative Thing Here */}
+            { Decorative Thing Here }
             <div className="h-full w-[80%] m-4 flex flex-row-reverse  items-center justify-between">
-              <PortfolioGraph color={GraphInfo[3].color} percent={GraphInfo[3].percent} /> {/*Graph */}
+              <PortfolioGraph color={GraphInfo[3].color} percent={GraphInfo[3].percent} /> {Graph }
               <div style={{fontFamily:''}} className="text-5xl m-3">
                 {GraphInfo[3].label}
                 <div className="text-base">
                   {GraphInfo[3].subText}
                 </div>
               </div>{" "}
-              {/* Label */}
+              { Label }
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

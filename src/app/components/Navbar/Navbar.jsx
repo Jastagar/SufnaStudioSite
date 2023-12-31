@@ -2,17 +2,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import logoImg from "@/app/asset/images/logo.png";
 import logoImgWhite from "@/app/asset/images/logoWhite.png";
 import HamBar from "../icons/HamBar";
+import logoImg from '../../asset/ImagesFinal/logoFull.png'
 
+// function NavLogo({scrolled}) {
+//   return (
+//     <>
+//     {scrolled
+//     ?<Image className="rounded-full" src={logoImg} height={64} width={64} alt="Logo" />
+//     :<Image className="rounded-full" src={logoImgWhite} height={64} width={64} alt="Logo" />
+//     }
+//     </>
+//   );
+// }
 function NavLogo({scrolled}) {
   return (
     <>
-    {scrolled
-    ?<Image className="rounded-full" src={logoImg} height={64} width={64} alt="Logo" />
-    :<Image className="rounded-full" src={logoImgWhite} height={64} width={64} alt="Logo" />
-    }
+      <Image src={logoImg} height={180} width={200} alt="Logo" />
     </>
   );
 }
@@ -81,12 +88,13 @@ function NavMobile({ scrolled }) {
 function NavDefault({ scrolled }) {
   return (
     <>
-      <div className="flex-1 py-1 justify-center hidden md:flex items-center h-full">
+      <div className="NavSkewBG uppercase font-bold flex-1 py-1 px-5 justify-between hidden md:flex items-center h-full">
+
         <div className="flex gap-4 mx-4 items-center">
           <NavLogo scrolled={scrolled} />
         </div>
         <div className="w-[75%]">
-          <ui className="w-full list-none flex justify-center items-center">
+          <ui className="w-full list-none flex justify-end items-center">
             <li className="">
               <Link
                 className={`w-full p-9 ${
@@ -104,7 +112,7 @@ function NavDefault({ scrolled }) {
                 } transition-all`}
                 href="#aboutus"
               >
-                About Us
+                what we do
               </Link>
             </li>
             <li className="">
@@ -114,7 +122,7 @@ function NavDefault({ scrolled }) {
                 } transition-all`}
                 href="#portfolio"
               >
-                Our Work
+                portfolio
               </Link>
             </li>
             <li className="">
@@ -124,7 +132,7 @@ function NavDefault({ scrolled }) {
                 } transition-all`}
                 href="#clients"
               >
-                Testimonials
+                About us
               </Link>
             </li>
             <li className="">
@@ -134,14 +142,11 @@ function NavDefault({ scrolled }) {
                 } transition-all`}
                 href="#contact"
               >
-                Contact Us
+                Contact
               </Link>
             </li>
           </ui>
         </div>
-        <h2 className={`font-bold text-4xl ${!scrolled? "text-white":"text-primary-900"}`}>
-          sufna
-        </h2>
       </div>
     </>
   );
@@ -181,9 +186,7 @@ export function Navbar() {
   return (
     <nav
       ref={navRef}
-      className={`min-h-[7dvh] transition-all sticky top-0 overflow-hidden z-20 ${
-        !addScrollStyles ? "bg-primary-400 shadow-lg text-white" : ""
-      }`}
+      className={`min-h-[7dvh] transition-all fixed w-full top-0 overflow-hidden text-white z-20`}
     >
       <NavDefault scrolled={addScrollStyles} />
       <NavMobile scrolled={addScrollStyles} />

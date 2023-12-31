@@ -68,9 +68,9 @@ body {
   
 }
 
-h1,h2,h3,h4,h5,h6{
+/* h1,h2,h3,h4,h5,h6{
   font-family: ForestEscape;
-}
+} */
 
 section{
   min-height: 93dvh;
@@ -140,6 +140,77 @@ section{
     max-height: 3rem;
   }
 }
+
+
+
+
+.CreativeBG{
+  background-image: url("./asset/ImagesFinal/Backgroundpage2to5.png");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+.CreativeBG2{
+  background-image: url("./asset/ImagesFinal/Backgroundpage6to7.png");
+  background-repeat: no-repeat;
+
+  background-size: 100% 100%;
+}
+.OurWorkBackground{
+  background-image: url("./asset/ImagesFinal/BackgroundPage3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.HeroBackground{
+  background-image: url("./asset/ImagesFinal/backgroundpage1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+}
+
+.ActorImagesBackgroundCircle{
+  background-image: url("./asset/ImagesFinal/BGCircle.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.NavSkewBG{
+  background-image: url("./asset/ImagesFinal/TopSkewBorder.png");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  padding-bottom: 15%;
+}
+
+.ContactUsBG{
+  background-image: url("./asset/ImagesFinal/Backgroundpage8.png");
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+}
+
+.purpleBG{
+  background-color:rgba(185, 113, 229, 0.6);
+  background-repeat: no-repeat;
+  background-size: 20% 100%;
+
+  border-radius: 50px;
+}
+
+.TriangleCSS{
+  border-left:24px solid rgb(235, 204, 255);
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-right: 16px solid transparent;
+}
+
+.BehindScenesBackground{
+  /* background-image: url("./asset/ImagesFinal/Section5BG.png"); */
+  background-color: rgba(0,0,0,0.4);
+  /* background-blend-mode: ; */
+  background-repeat: no-repeat;
+  /* background-blend-mode: color-burn; */
+  background-size: cover;
+}
+
+
 
 /*
 
