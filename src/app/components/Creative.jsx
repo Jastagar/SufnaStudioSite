@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 export default function Creative() {
   return (
-    <div className='h-[100dvh] relative z-[-1]'>
+    <section id='whatwedo' className='h-[100dvh] relative z-[-1]'>
         <div className=''>
             <div className='h-[100dvh] absolute w-[95dvw] left-[5dvw]'>
                 <Image
@@ -35,7 +35,6 @@ export default function Creative() {
                 </p>
             </div>
         </div>
-
-    </div>
+    </section>
   )
 }
