@@ -18,10 +18,18 @@ import logoImg from '../../asset/ImagesFinal/logoFull.png'
 // }
 function NavLogo({scrolled}) {
   return (
-    <>
-      <Image src={logoImg} height={180} width={200} alt="Logo" />
-    </>
+    <div className="relative h-6 w-48 p-4">
+      <Image src={logoImg} fill alt="Logo" />
+    </div>
   );
+}
+
+function GhostNavDiv(){
+  return(
+    <div className="grow h-[100px]">
+
+    </div>
+  )
 }
 
 function NavMobile({ scrolled }) {
@@ -87,10 +95,10 @@ function NavMobile({ scrolled }) {
 }
 function NavDefault({ scrolled }) {
   return (
-    <>
-      <div className="NavSkewBG uppercase font-bold flex-1 py-1 px-5 justify-between hidden md:flex items-center h-full">
+    <div className="NavSkewBG flex flex-col">
+      <div className="uppercase font-bold flex-1 py-1 px-5 justify-between hidden md:flex items-center">
 
-        <div className="flex gap-4 mx-4 items-center">
+        <div className="flex gap-4 mx-4 items-start p-4">
           <NavLogo scrolled={scrolled} />
         </div>
         <div className="w-[75%]">
@@ -148,7 +156,9 @@ function NavDefault({ scrolled }) {
           </ui>
         </div>
       </div>
-    </>
+
+      <GhostNavDiv />
+    </div>
   );
 }
 

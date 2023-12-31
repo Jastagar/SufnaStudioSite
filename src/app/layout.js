@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         {/* <link href="../../../node_modules/aos/dist/aos.css" rel="stylesheet"/>
         <script src="../../../node_modules/aos/dist/aos.js"></script> */}
       </head>
-      <body className={`${inter.className} scroll-smooth h-[734.5dvh]`}>
+      <body className={`${inter.className} scroll-smooth`}>
         <Navbar />
         {children}
         {/* <Footer /> */}

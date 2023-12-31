@@ -73,7 +73,7 @@ body {
 } */
 
 section{
-  min-height: 93dvh;
+  /* min-height: 93dvh; */
 }
 
 .cls-2 {
@@ -176,14 +176,13 @@ section{
 .NavSkewBG{
   background-image: url("./asset/ImagesFinal/TopSkewBorder.png");
   background-repeat: no-repeat;
-  background-size: 100% 50%;
-  padding-bottom: 15%;
+  background-size: 100% 100%;
 }
 
 .ContactUsBG{
   background-image: url("./asset/ImagesFinal/Backgroundpage8.png");
   background-repeat: no-repeat;
-  background-size: 100% 80%;
+  background-size: 100% 100%;
 }
 
 .purpleBG{

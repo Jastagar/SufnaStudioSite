@@ -132,7 +132,7 @@ const GraphInfo=[
 
 export default function OurWork({ data }) {
   return (
-    <section className="relative h-[125dvh] z-[-2] OurWorkBackground text-white top-[-60dvh] pt-[15dvh]" id="portfolio">
+    <section className="relative h-[100dvh] z-[-2] OurWorkBackground text-white top-[-10dvh] pt-[10dvh]" id="portfolio">
       <div className="h-full">
         
         <h2 className="text-center text-4xl md:text-6xl font-bold  drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] stroke-black p-10 flex items-baseline justify-center">
@@ -141,7 +141,7 @@ export default function OurWork({ data }) {
         <h3 className="text-center pb-12 text-3xl font-semibold">
           We Live the stories we tell
         </h3>
-        <div className="flex h-[65dvh] flex-wrap mx-40 rounded-2xl overflow-hidden">
+        <div className="flex h-[45dvh] flex-wrap mx-40 rounded-2xl overflow-hidden">
           {dummyVideos &&
             dummyVideos.map((e, i) => (
               <div

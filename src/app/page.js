@@ -14,15 +14,16 @@ export default async function Home() {
   return (
       <main className="font-sans overflow-x-hidden">
         <Hero data={data.home} />
-        <div className="relative z-[-2] top-[-25dvh] pt-[25dvh] CreativeBG border border-yellow-800">
+        <div className="relative z-[-2] top-[-25dvh] CreativeBG border">
           <Creative data={data.home} />
           <OurWork data={data.ourwork} />
           <Aboutus data={data.aboutus} />
           <CreativeBehindScenes data={data} />
         </div>
-        <Clients data={data.clients} />
-
-        <ContactUs data={data.contactus} />
+        <div className="relative">
+          <Clients data={data.clients} />
+          <ContactUs data={data.contactus} />
+        </div>
         <Script>{"AOS.init()"}</Script>
       </main>
   );

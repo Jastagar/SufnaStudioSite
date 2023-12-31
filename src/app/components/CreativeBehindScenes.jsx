@@ -2,10 +2,17 @@ import Image from 'next/image'
 import React from 'react'
 import CameraImage from '../asset/ImagesFinal/Creative2Camera.png'
 import { ChalkBoard, LeftArrowChalk, RightArrowChalk } from '../asset/ImagesFinal/ChalkedIcons'
+import ImageSkewAboutUs from "../asset/ImagesFinal/AboutUsBorderSkew.png";
 
 export default function CreativeBehindScenes() {
   return (
-    <section className='text-white relative z-[-2] top-[-65dvh] pt-[20dvh] BehindScenesBackground'>
+    <section className='text-white h-[75dvh] relative z-[-2] top-[-5dvh] BehindScenesBackground'>
+        <div className="absolute translate-y-[-65%] left-0 h-[25dvh] w-full">
+          <Image
+            fill
+            src={ImageSkewAboutUs}
+          />
+        </div>
         <div className='p-12 flex'>
             <div className='w-[40%]'>
                 <div className='relative h-full px-[20%]'>

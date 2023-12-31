@@ -4,7 +4,6 @@ import Heroimage1 from "../asset/ImagesFinal/Hero1.png";
 import Heroimage2 from "../asset/ImagesFinal/Hero2.png";
 import Heroimage3 from "../asset/ImagesFinal/Hero3.png";
 import Heroimage4 from "../asset/ImagesFinal/Hero4.png";
-import ImageSkewAboutUs from "../asset/ImagesFinal/AboutUsBorderSkew.png";
 
 function ActorImages({imageSrc,className,offsetTop, offsetLeft}) {
   return (
@@ -21,12 +20,12 @@ export default function Aboutus({ data }) {
 
   return (
     <>
-      <section id="aboutus" className="relative top-[-60dvh] px-[10%] text-white">
-        <h2 className="text-4xl md:text-6xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+      <section id="aboutus" className="relative h-[80dvh] top-[-20dvh] px-[10%] text-white">
+        <h2 className="text-4xl md:text-6xl font-extrabold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           About Us
         </h2>
 
-        <div className="flex justify-center items-start p-5 h-[65dvh]">
+        <div className="flex justify-center items-start p-5">
           <div className="grow flex flex-col">        
             <div className="grow flex items-baseline">
               <ActorImages offsetTop={"5"} offsetLeft={"5"} className={"w-[60%] translate-x-0 translate-y-0"} imageSrc={Heroimage3} />
@@ -44,7 +43,7 @@ export default function Aboutus({ data }) {
             🌟 Crafting Creativity<br/>
                 One Frame at a Time 🌟
             </h3>
-            <div className="text-2xl w-[80%]">
+            <div className="text-2xl w-[100%]">
               <p className="text-start mr-10 p-4">
                 At Sufna Productions, we're not just another media production agency - we're the storytellers, the visionaries, and the creative engine that brings your brand's narrative to life. 
               </p>
@@ -55,16 +54,6 @@ export default function Aboutus({ data }) {
           </div>
 
         </div>
-        
-        <div className="absolute left-0 h-[25dvh] w-full">
-          <Image
-            fill
-            src={ImageSkewAboutUs}
-          />
-        </div>
-
-
-
 
         {/* <div className="flex justify-center items-center flex-col md:flex-row md:items-start">
           <div className="flex justify-between p-10 md:w-[80%]">

@@ -44,8 +44,8 @@ export function ContactMeFrom({data}){
   }
   return(
     <div className='flex flex-col items-center p-10'>
-        <div className='p-8'> 
-          <h3 className='text-xl font-semibold'>Contact Form</h3>
+        <div className='p-8 w-full'> 
+          <h3 className='text-xl text-start font-semibold pl-8'>Contact Form</h3>
         </div> 
         <form ref={form} className='MainForm' onSubmit={handleSubmit}>
           <div className='flex'>
@@ -74,10 +74,20 @@ export function ContactMeFrom({data}){
 }
 
 
+function GhostDiv(){
+  return(
+    <div className='h-[19dvh]'>
+
+    </div>
+  )
+}
+
 
 export default function ContactUs({data}) {
   return (
-    <section id='contact' className='h-[90dvh] relative top-[-115dvh] pt-[10dvh] ContactUsBG text-white'>
+    <>
+    <GhostDiv />
+    <section id='contact' className='absolute w-full bottom-0 ContactUsBG text-white'>
       <div className='flex p-12'>
         <div className='w-[50%] p-5'>
           <h1 className='text-4xl font-semibold py-5'>
@@ -110,5 +120,6 @@ export default function ContactUs({data}) {
 
       </div>
     </section>
+    </>
   )
 }

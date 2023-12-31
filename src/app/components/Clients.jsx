@@ -4,6 +4,7 @@ import ClientsImage from "../asset/images/Clients.png";
 import TriangleSVG from "../asset/ImagesFinal/TriangleSVG";
 import TopBorderShapeClients from "../asset/ImagesFinal/TopBorderShapeClients.png";
 import Brands from "../asset/ImagesFinal/Brands.png";
+import Courts from "../asset/ImagesFinal/Courts.png";
 
 function ArrowButton({ btnWidth, btnHeight, buttonRight }) {
   return (
@@ -21,8 +22,10 @@ function ArrowButton({ btnWidth, btnHeight, buttonRight }) {
 
 function DoubleCommas() {
   return (
-    <div className="absolute top-0 left-6 translate-y-[-37%] text-[12rem] text-red-500">
-      "
+    <div className="absolute top-0 translate-y-[-50%] left-6 text-[12rem] text-red-500">
+      <div className="relative h-12 w-16">
+        <Image fill src={Courts}/>
+      </div>
     </div>
   );
 }
@@ -30,7 +33,7 @@ function DoubleCommas() {
 export default function Clients({ data }) {
   return (
     <>
-    <section id="Clients" className="relative CreativeBG2 top-[-100dvh]">
+    <section id="Clients" className="relative CreativeBG2 top-[-35dvh]">
       <div className="text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
         <div className="flex flex-col gap-12 items-center justify-center">
           <h3 className="text-7xl font-extrabold">Client's Testimonials</h3>
