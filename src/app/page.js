@@ -25,6 +25,8 @@ export default async function Home() {
           <ContactUs data={data.contactus} />
         </div>
         <Script>{"AOS.init()"}</Script>
+        <Script src="js/jquery-3.2.1.js"/>
+        <Script src="js/morphext.min.js"/>
       </main>
   );
 }
