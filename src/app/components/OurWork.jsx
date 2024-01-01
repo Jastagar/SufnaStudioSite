@@ -16,7 +16,6 @@ import image9 from "../asset/images/image9.jpg";
 import LoadingSVG from "../asset/ImagesFinal/LoadingSVG";
 import YoutubeIcon from "../asset/ImagesFinal/YoutubeIcon";
 
-
 const dummyVideos = [
   {
     url: "https://www.youtube.com/embed/suSKmHIK5NI",
@@ -103,40 +102,46 @@ const images = [
   },
 ];
 
-const GraphInfo=[
+const GraphInfo = [
   {
-    percent:80,
-    label:"Projects Completed",
-    subText:"",
-    color:"aqua"
+    percent: 80,
+    label: "Projects Completed",
+    subText: "",
+    color: "aqua",
   },
   {
-    percent:70,
-    label:"Total Clients",
-    subText:"",
-    color:"pink"
+    percent: 70,
+    label: "Total Clients",
+    subText: "",
+    color: "pink",
   },
   {
-    percent:90,
-    label:"Satisfied Customers",
-    subText:"",
-    color:"lime"
+    percent: 90,
+    label: "Satisfied Customers",
+    subText: "",
+    color: "lime",
   },
   {
-    percent:65,
-    label:"Growth in 1 year",
-    subText:"",
-    color:"orange"
+    percent: 65,
+    label: "Growth in 1 year",
+    subText: "",
+    color: "orange",
   },
-]
+];
 
 export default function OurWork({ data }) {
   return (
-    <section className="relative h-[100dvh] z-[-2] OurWorkBackground text-white top-[-10dvh] pt-[10dvh]" id="portfolio">
+    <section
+      className="relative h-[100dvh] z-[-2] OurWorkBackground text-white top-[-10dvh] pt-[10dvh]"
+      id="portfolio"
+    >
       <div className="h-full">
-        
         <h2 className="text-center text-4xl md:text-6xl font-bold  drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] stroke-black p-10 flex items-baseline justify-center">
-          {"Our W"}<span className="h-10 w-10"><LoadingSVG /></span>{"rk"}
+          {"Our W"}
+          <span className="h-10 w-10 LoadingAnimation">
+            <LoadingSVG />
+          </span>
+          {"rk"}
         </h2>
         <h3 className="text-center pb-12 text-3xl font-semibold">
           We Live the stories we tell
@@ -162,7 +167,16 @@ export default function OurWork({ data }) {
         <div className="text-center font-bold text-2xl py-8">
           <i>Loading Your Dreams Onto Our Camera.</i>
           <div className="flex justify-center items-center">
-            <span className="h-10 w-10"><YoutubeIcon /></span><i>/SufnaProductions</i>
+            <span className="h-10 w-10">
+              <YoutubeIcon />
+            </span>
+            <a
+              className="hover:text-blue-600"
+              href="https://www.youtube.com/@Sufna.Productions"
+              target="_blank"
+            >
+              <i>/SufnaProductions</i>
+            </a>
           </div>
         </div>
 

@@ -128,6 +128,10 @@ section{
   }
 }
 
+@keyframes loadingAnimation {
+  
+}
+
 @keyframes scaleInAnimation {
   to{
     scale: 1;
@@ -179,6 +183,12 @@ section{
   background-size: 100% 100%;
 }
 
+.ChalkboardBG{
+  background-image: url("./asset/ImagesFinal/chalkboard.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 .ContactUsBG{
   background-image: url("./asset/ImagesFinal/Backgroundpage8.png");
   background-repeat: no-repeat;
@@ -200,6 +210,10 @@ section{
   border-right: 16px solid transparent;
 }
 
+.noScroll::-webkit-scrollbar{
+  display: none;
+}
+
 .BehindScenesBackground{
   /* background-image: url("./asset/ImagesFinal/Section5BG.png"); */
   background-color: rgba(0,0,0,0.4);
@@ -209,6 +223,18 @@ section{
   background-size: cover;
 }
 
+@keyframes loadingAnimationSnap {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.LoadingAnimation{
+  animation: loadingAnimationSnap 1s steps(12) infinite;
+}
 
 
 /*

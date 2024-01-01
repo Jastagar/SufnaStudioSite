@@ -76,7 +76,7 @@ export function ContactMeFrom({data}){
 
 function GhostDiv(){
   return(
-    <div className='h-[19dvh]'>
+    <div className='h-[30dvh]'>
 
     </div>
   )
@@ -88,36 +88,37 @@ export default function ContactUs({data}) {
     <>
     <GhostDiv />
     <section id='contact' className='absolute w-full bottom-0 ContactUsBG text-white'>
-      <div className='flex p-12'>
-        <div className='w-[50%] p-5'>
-          <h1 className='text-4xl font-semibold py-5'>
-              Contact Us
-          </h1>
-          <div className='py-6'>
-            <h3 className='text-2xl font-semibold'>
-              Our Address
-            </h3>
-            <p className='py-8'>
-              28A 28B HSIDC<br/>
-              DELHI PULL SIRSA,<br/>
-              HARYANA 125055 
-            </p>
-            <ul className='list-disc pl-4'>
-              <li>Business@sufnaproduction.com</li>
-              <li>Sufna.productions</li>
-              <li>+91-97794-26400</li>
-            </ul>
+      <div className='flex flex-col'>
+        <div className='flex p-12'>
+          <div className='w-[50%] p-5'>
+            <h1 className='text-4xl font-semibold py-5'>
+                Contact Us
+            </h1>
+            <div className='py-6'>
+              <h3 className='text-2xl font-semibold'>
+                Our Address
+              </h3>
+              <p className='py-8'>
+                28A 28B HSIDC<br/>
+                DELHI PULL SIRSA,<br/>
+                HARYANA 125055 
+              </p>
+              <ul className='list-disc pl-4'>
+                <li>Business@sufnaproduction.com</li>
+                <li>Sufna.productions</li>
+                <li>+91-97794-26400</li>
+              </ul>
+            </div>
           </div>
+
+          <div className='grow'>
+            <ContactMeFrom data={data} />
+          </div>
+
         </div>
-
-        <div className='grow'>
-          <ContactMeFrom data={data} />
+        <div className='pl-12 pt-6 pb-16 border border-primary-300'>
+          (C) Copyright 2024, All Rights Reserved.
         </div>
-
-      </div>
-      <div className='mainContact'>
-        {/* <SocialLinks /> */}
-
       </div>
     </section>
     </>

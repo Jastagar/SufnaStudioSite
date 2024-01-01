@@ -12,19 +12,21 @@ export default async function Home() {
   // const data = await rawData.json()
   const data = {}
   return (
-      <main className="font-sans overflow-x-hidden">
-        <Hero data={data.home} />
-        <div className="relative z-[-2] top-[-25dvh] CreativeBG border">
+      <main className="relative font-sans overflow-x-hidden">
+        <div className="relative z-[4]">
+          <Hero data={data.home} />
+        </div>
+        <div className="relative z-[3] top-[-25dvh] CreativeBG border">
           <Creative data={data.home} />
           <OurWork data={data.ourwork} />
           <Aboutus data={data.aboutus} />
           <CreativeBehindScenes data={data} />
         </div>
-        <div className="relative">
+        <div className="relative z-[4]">
           <Clients data={data.clients} />
           <ContactUs data={data.contactus} />
         </div>
-        <Script>{"AOS.init()"}</Script>
+        {/* <Script>{"AOS.init()"}</Script> */}
       </main>
   );
 }
