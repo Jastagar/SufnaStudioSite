@@ -56,25 +56,28 @@ export default function CreativeBehindScenes() {
     }
 
   return (
-    <section className='text-white h-[75dvh] relative z-[-2] top-[-5dvh] BehindScenesBackground'>
-        <div className="absolute translate-y-[-65%] left-0 h-[25dvh] w-full">
+    <section className='text-white min-h-[100dvh] relative z-[-2] p-2 BehindScenesBackground'>
+        <div className="absolute top-0 translate-y-[-30%] md:translate-y-[-50%] left-0 aspect-[6.1] w-full">
           <Image
             fill
             src={ImageSkewAboutUs}
           />
         </div>
-        <div className='p-12 flex'>
-            <div className='w-[200%] xl:w-[60%] lg:w-[120%] md:w-[100%]'>
-                <div className='relative h-full px-[20%]'>
+
+        <div className='pt-16 md:p-12 flex flex-col justify-between items-center md:flex-row'>
+
+            <div className='w-[100%] md:w-[40%] py-8 px-16 md:p-32'>
+                <div className='relative w-full  aspect-square'>
                     <Image
                         fill
                         src={CameraImage}
                     />
                 </div>
             </div>
+
             {/*Start From sizing images*/}
-            <div className='grow'>
-                <h2 className='text-center text-6xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
+            <div className='w-[100%] md:w-[60%]'>
+                <h2 className='hidden md:block text-center text-6xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
                     Behind the Scenes
                 </h2>
                 <div className='flex justify-start items-center'>
@@ -103,9 +106,11 @@ export default function CreativeBehindScenes() {
                         <RightArrowChalk />
                     </button>
                 </div>
-                 
             </div>
         </div>
+        <h2 className='md:hidden text-center pb-20 text-4xl font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'>
+            Behind the Scenes
+        </h2>
     </section>
   )
 }

@@ -1,9 +1,12 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import Heroimage1 from "../asset/ImagesFinal/Hero1.png";
 import Heroimage2 from "../asset/ImagesFinal/Hero2.png";
 import Heroimage3 from "../asset/ImagesFinal/Hero3.png";
 import Heroimage4 from "../asset/ImagesFinal/Hero4.png";
+
+const displacementFactor = 150
 
 function ActorImages({imageSrc,className,offsetTop, offsetLeft}) {
   return (
@@ -17,16 +20,34 @@ function ActorImages({imageSrc,className,offsetTop, offsetLeft}) {
 
 
 export default function Aboutus({ data }) {
-
+  const [cursorLocation,setCursorLocation] = useState({x:0,y:0})
+  const handleWindowMouseMove = event => {
+      setCursorLocation({
+      x: ((event.clientX)/displacementFactor),
+      y: ((event.clientY)/displacementFactor),
+      });
+  }
   return (
     <>
-      <section id="aboutus" className="relative h-[80dvh] top-[-20dvh] px-[10%] text-white">
-        <h2 className="text-4xl md:text-6xl font-extrabold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+      <section id="aboutus" className="relative min-h-[100dvh] md:px-[10%] px-1 text-white">
+        <h2 className="text-7xl md:text-start py-4 md:py-0 text-center md:text-6xl font-extrabold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           About Us
         </h2>
 
-        <div className="flex justify-center items-start p-5">
-          <div className="grow flex flex-col">        
+        <div onMouseMove={handleWindowMouseMove} className="md:flex justify-between items-start md:p-5">
+
+
+          <div className="w-[100%] md:w-[40%] flex flex-col">        
+            <div className="grow flex items-baseline">
+              <ActorImages offsetTop={cursorLocation.x} offsetLeft={cursorLocation.y} className={"w-[60%] translate-x-0 translate-y-0"} imageSrc={Heroimage3} />
+              <ActorImages offsetTop={cursorLocation.y} offsetLeft={cursorLocation.x} className={"w-[40%] translate-x-[-2rem] translate-y-0"} imageSrc={Heroimage2} />
+            </div>
+            <div className="grow flex items-start">
+              <ActorImages offsetTop={-1*cursorLocation.x} offsetLeft={-1*cursorLocation.y} className={"w-[40%] translate-x-[2rem] translate-y-[-3rem]"} imageSrc={Heroimage1} />
+              <ActorImages offsetTop={-1*cursorLocation.y} offsetLeft={-1*cursorLocation.x} className={"w-[60%] translate-x-0 translate-y-[-2rem]"} imageSrc={Heroimage4} />
+            </div>
+          </div>
+          {/* <div className="w-[100%] md:w-[40%] flex flex-col">        
             <div className="grow flex items-baseline">
               <ActorImages offsetTop={"5"} offsetLeft={"5"} className={"w-[60%] translate-x-0 translate-y-0"} imageSrc={Heroimage3} />
               <ActorImages offsetTop={"5"} offsetLeft={"0"} className={"w-[40%] translate-x-[-2rem] translate-y-0"} imageSrc={Heroimage2} />
@@ -35,52 +56,24 @@ export default function Aboutus({ data }) {
               <ActorImages offsetTop={"5"} offsetLeft={"5"} className={"w-[40%] translate-x-[2rem] translate-y-[-3rem]"} imageSrc={Heroimage1} />
               <ActorImages offsetTop={"5"} offsetLeft={"-5"} className={"w-[60%] translate-x-0 translate-y-[-2rem]"} imageSrc={Heroimage4} />
             </div>
-          </div>
+          </div> */}
 
 
-          <div className="w-[60%] text-center h-full flex flex-col gap-10 items-center">
-            <h3 className="text-3xl font-semibold pt-12">
+          <div className="md:w-[50%] pb-4 md:p-8 text-center h-full flex flex-col gap-10 justify-end items-center">
+            <h3 className="text-2xl md:text-5xl font-bold pt-4 md:pt-12">
             🌟 Crafting Creativity<br/>
                 One Frame at a Time 🌟
             </h3>
-            <div className="text-2xl w-[100%]">
-              <p className="text-start mr-10 p-4">
+            <div className="text-xl font-semibold md:text-3xl w-[100%]">
+              <p className="text-start md:mr-10 p-4">
                 At Sufna Productions, we're not just another media production agency - we're the storytellers, the visionaries, and the creative engine that brings your brand's narrative to life. 
               </p>
-              <p className="text-end ml-10 p-2">
+              <p className="text-end md:ml-10 p-2">
                 We are passionate about helping modern-day brands make captivating, creative, and high-quality advertisements that leave a lasting impression.
               </p>
             </div>
           </div>
-
         </div>
-
-        {/* <div className="flex justify-center items-center flex-col md:flex-row md:items-start">
-          <div className="flex justify-between p-10 md:w-[80%]">
-            {Image Showcase}
-            <div className="max-w-[40%] relative w-full h-[80dvh]">
-              <div className="absolute bg-body-background shadow-lg m-2 p-2 top-0 w-[80%] aspect-[16/9]">
-                <div className="relative h-full w-full">
-                  <Image src={image1} fill alt="AboutUsImage" />
-                </div>
-              </div>
-              <div className="absolute bg-body-background shadow-lg m-2 p-2 top-[25%] left-16 w-[80%] aspect-[16/9]">
-                <div className="relative h-full w-full">
-                  <Image src={image2} fill alt="AboutUsImage" />
-                </div>
-              </div>
-              <div className="absolute bg-body-background shadow-lg m-2 p-2 top-[50%] left-8 w-[80%] aspect-[16/9]">
-                <div className="relative h-full w-full">
-                  <Image src={image3} fill alt="AboutUsImage" />
-                </div>
-              </div>
-            </div>
-            {Written Content}
-            <div className="w-[40%] h-[70%] my-auto">
-              <div className="text-xl">{data.content[1]}</div>
-            </div>
-          </div>
-        </div> */}
       </section>
     </>
   );

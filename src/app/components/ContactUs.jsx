@@ -43,8 +43,8 @@ export function ContactMeFrom({data}){
     form.current.message.value = ''
   }
   return(
-    <div className='flex flex-col items-center p-10'>
-        <div className='p-8 w-full'> 
+    <div className='flex flex-col items-center md:p-10 p-4'>
+        <div className='md:p-8 w-full'> 
           <h3 className='text-xl text-start font-semibold pl-8'>Contact Form</h3>
         </div> 
         <form ref={form} className='MainForm' onSubmit={handleSubmit}>
@@ -57,7 +57,7 @@ export function ContactMeFrom({data}){
               <label htmlFor={'InputIdForMessage'}>Message:</label>
             </div>
             <div className='eachTD'>
-              <textarea required={true} maxLength={200} name={'message'} className='text-2xl w-full text-black border border-white bg-transparent' id={'InputIdForMessage'}></textarea>
+              <textarea required={true} maxLength={300} name={'message'} className='text-2xl w-full text-black border border-white bg-transparent' id={'InputIdForMessage'}></textarea>
             </div>
           </div>
           <div className='text-end'>
@@ -74,24 +74,16 @@ export function ContactMeFrom({data}){
 }
 
 
-function GhostDiv(){
-  return(
-    <div className='h-[30dvh]'>
-
-    </div>
-  )
-}
-
-
 export default function ContactUs({data}) {
   return (
     <>
-    <GhostDiv />
-    <section id='contact' className='absolute w-full bottom-0 ContactUsBG text-white'>
-      <div className='flex flex-col'>
-        <div className='flex p-12'>
+    <div className='relative h-[120dvh] md:h-[30dvh] top-0 md:top-[30dvh]'>
+    <section id='contact' className='absolute ContactUsBG bottom-0 w-full text-white '>
+      <div className=' flex flex-col'>
+        <div className='flex flex-col-reverse md:flex-row md:py-12 md:px-24'>
+
           <div className='w-[50%] p-5'>
-            <h1 className='text-4xl font-semibold py-5'>
+            <h1 className='hidden md:block text-4xl font-semibold py-5'>
                 Contact Us
             </h1>
             <div className='py-6'>
@@ -115,12 +107,16 @@ export default function ContactUs({data}) {
             <ContactMeFrom data={data} />
           </div>
 
+          <h1 className='md:hidden text-4xl font-semibold py-10 p-4 mt-4'>
+              Contact Us
+          </h1>
         </div>
         <div className='pl-12 pt-6 pb-16 border border-primary-300'>
           (C) Copyright 2024, All Rights Reserved.
         </div>
       </div>
     </section>
+    </div>
     </>
   )
 }

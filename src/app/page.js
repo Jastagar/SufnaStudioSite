@@ -16,13 +16,13 @@ export default async function Home() {
         <div className="relative z-[4]">
           <Hero data={data.home} />
         </div>
-        <div className="relative z-[3] top-[-25dvh] CreativeBG border">
+        <div className="relative z-[3] -top-3 md:top-[-25dvh] CreativeBG border">
           <Creative data={data.home} />
           <OurWork data={data.ourwork} />
           <Aboutus data={data.aboutus} />
           <CreativeBehindScenes data={data} />
         </div>
-        <div className="relative z-[4]">
+        <div className="relative z-[4] -top-3 md:top-[-30dvh]">
           <Clients data={data.clients} />
           <ContactUs data={data.contactus} />
         </div>

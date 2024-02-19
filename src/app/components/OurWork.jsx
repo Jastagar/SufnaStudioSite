@@ -132,26 +132,27 @@ const GraphInfo = [
 export default function OurWork({ data }) {
   return (
     <section
-      className="relative h-[100dvh] z-[-2] OurWorkBackground text-white top-[-10dvh] pt-[10dvh]"
+      className="relative min-h-[110dvh] z-[-2] OurWorkBackground text-white pt-[8%]"
       id="portfolio"
     >
       <div className="h-full">
         <h2 className="text-center text-4xl md:text-6xl font-bold  drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] stroke-black p-10 flex items-baseline justify-center">
           {"Our W"}
-          <span className="h-10 w-10 LoadingAnimation">
+          <span className="w-6 md:w-10 md:mt-0 mt-10 aspect-square LoadingAnimation">
             <LoadingSVG />
           </span>
           {"rk"}
         </h2>
-        <h3 className="text-center pb-12 text-3xl font-semibold">
+        <h3 className="text-center pb-12 text-3xl font-semibold chalkfont">
           We Live the stories we tell
         </h3>
-        <div className="flex h-[45dvh] flex-wrap mx-40 rounded-2xl overflow-hidden">
+
+        <div className="flex flex-col md:flex-row min-h-[55dvh] md:flex-wrap mx-10 md:mx-40 rounded-2xl overflow-hidden">
           {dummyVideos &&
             dummyVideos.map((e, i) => (
               <div
                 key={"eACHKEYFORVIDEO" + i}
-                className="rounded-md grow w-[33%]"
+                className="rounded-md grow md:w-[33%]"
               >
                 <iframe
                   src={e.url}
@@ -179,68 +180,6 @@ export default function OurWork({ data }) {
             </a>
           </div>
         </div>
-
-        {/* Images goes here */}
-
-        {/* Videos section */}
-        {/*  */}
-
-        {/* Company Stats */}
-        {/* <div className="flex justify-center items-center h-[70dvh] my-10">
-          <div className="flex-grow h-full flex flex-col items-center justify-between">
-            <div className="h-full w-[80%] m-4 flex items-center justify-between">
-              <PortfolioGraph color={GraphInfo[0].color} percent={GraphInfo[0].percent} /> { Graph }
-              <div style={{fontFamily:''}} className="text-5xl m-3">
-                {GraphInfo[0].label}
-                <div className="text-base">
-                  {GraphInfo[0].subText}
-                </div>
-              </div>{" "}
-              { Label }
-            </div>
-            { Decorative Thing Here }
-            <div className="h-full w-[80%] m-4 flex items-center justify-between">
-              <PortfolioGraph color={GraphInfo[1].color} percent={GraphInfo[1].percent} /> {Graph }
-              <div style={{fontFamily:''}} className="text-5xl m-3">
-                {GraphInfo[1].label}
-                <div className="text-base">
-                  {GraphInfo[1].subText}
-                </div>
-              </div>{" "}
-              { Label }
-            </div>
-          </div>
-
-          <div data-aos='zoom-in-up' className="w-[30%] h-[80%]">
-            <div className="relative w-full h-full">
-              <Image fill src={TeamImage} />
-            </div>
-          </div>
-
-          <div className="flex-grow h-full flex flex-col items-center justify-between">
-            <div className="h-full w-[80%] m-4 flex flex-row-reverse items-center justify-between">
-              <PortfolioGraph color={GraphInfo[2].color} percent={GraphInfo[2].percent} /> {Graph }
-              <div style={{fontFamily:''}} className="text-5xl m-3">
-                {GraphInfo[2].label}
-                <div className="text-base">
-                  {GraphInfo[2].subText}
-                </div>
-              </div>{" "}
-              { Label }
-            </div>
-            { Decorative Thing Here }
-            <div className="h-full w-[80%] m-4 flex flex-row-reverse  items-center justify-between">
-              <PortfolioGraph color={GraphInfo[3].color} percent={GraphInfo[3].percent} /> {Graph }
-              <div style={{fontFamily:''}} className="text-5xl m-3">
-                {GraphInfo[3].label}
-                <div className="text-base">
-                  {GraphInfo[3].subText}
-                </div>
-              </div>{" "}
-              { Label }
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

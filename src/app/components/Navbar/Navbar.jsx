@@ -16,9 +16,9 @@ import logoImg from '../../asset/ImagesFinal/logoFull.png'
 //     </>
 //   );
 // }
-function NavLogo({scrolled}) {
+function NavLogo({height,width}) {
   return (
-    <div className="relative h-6 w-48 p-4">
+    <div className={`relative ${height} ${width}`}>
       <Image src={logoImg} fill alt="Logo" />
     </div>
   );
@@ -36,70 +36,25 @@ function NavMobile({ scrolled }) {
   const [dropped,setDropped] = useState(false)
   return (
     <>
-      <div className="flex flex-col md:hidden justify-start bg-primary-400 shadow-lg text-white">
-        <div className="flex justify-between items-center">
-          <div onClick={()=>setDropped(!dropped)} className="h-[2rem] w-[2rem] mx-4">
-            <HamBar />
+      <div className="flex flex-col md:hidden justify-between NavSkewBGMob">
+          <div className="flex gap-4 mx-4 items-start p-4">
+            <NavLogo height="h-8" width="w-24" />
           </div>
-          <div className="w-[25%] text-center flex justify-center items-center mx-4 gap-4">
-            <NavLogo />
+          <div className="">
+
           </div>
-        </div>
-        <div className={`overflow-hidden transition-all ${dropped? "max-h-72":"max-h-0"}`}>
-          <ui className="list-none">
-            <li className="my-3 text-xl font-medium">
-              <Link
-                className="w-full px-6 hover:bg-primary-400 transition-all"
-                href="#home"
-              >
-                Home
-              </Link>
-            </li>
-            <li className="my-3 text-xl font-medium">
-              <Link
-                className="w-full px-6 hover:bg-primary-400 transition-all"
-                href="#aboutus"
-              >
-                About Us
-              </Link>
-            </li>
-            <li className="my-3 text-xl font-medium">
-              <Link
-                className="w-full px-6 hover:bg-primary-400 transition-all"
-                href="#portfolio"
-              >
-                Our Work
-              </Link>
-            </li>
-            <li className="my-3 text-xl font-medium">
-              <Link
-                className="w-full px-6 hover:bg-primary-400 transition-all"
-                href="#clients"
-              >
-                Testimonials
-              </Link>
-            </li>
-            <li className="my-3 text-xl font-medium">
-              <Link
-                className="w-full px-6 hover:bg-primary-400 transition-all"
-                href="#contact"
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ui>
-        </div>
+        <GhostNavDiv />
       </div>
     </>
   );
 }
 function NavDefault({ scrolled }) {
   return (
-    <div className="NavSkewBG flex flex-col">
+    <div className="NavSkewBG hidden md:flex flex-col">
       <div className="uppercase font-bold flex-1 py-1 px-5 justify-between hidden md:flex items-center">
 
-        <div className="flex gap-4 mx-4 items-start p-4">
-          <NavLogo scrolled={scrolled} />
+        <div className="flex gap-4 mx-4 items-start p-2">
+          <NavLogo height="h-16" width="w-48" />
         </div>
         <div className="w-[75%]">
           <ui className="w-full list-none flex justify-end items-center">
